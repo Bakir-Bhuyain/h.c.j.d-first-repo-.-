@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tour of DOM</title>
+      <link rel="stylesheet" href="/styles.css">
+      <style>
+            .fruits-container li{
+                  color: chartreuse;
+            }
+            #fruits-title{
+                  color: black;
+            }
+            .important-places{
+                  color: blueviolet;
+            }
+      </style>
+</head>
+<body>
+      <header>
+            <h1>welcome to my DOM </h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Architecto quidem eaque veniam ullam unde repellendus impedit ab accusamus sunt, 
+            exercitationem totam adipisci rerum fuga reprehenderit cupiditate esse excepturi dicta debitis.</p>
+      </header>
+      <main>
+            <section>
+                   <h1>My awesome DOM de baba</h1>
+       <ul>
+            <li>Jalali set</li>
+            <li>Shafayet</li>
+            <li>bonobash</li>
+       </ul> 
+            </section>
+      
+       <section class="fruits-container">
+            <h1 id="fruits-title">I Like Fruits</h1>
+            <ul>
+                  <li>Apple</li>
+                  <li>Banana</li>
+                  <li>Cherry</li>
+            </ul>
+       </section>    
+       <section>
+            <h1 id="places-title">Places i like to visit </h1>
+            <ul>
+                  <li class="important-places">kataban</li>
+                  <li class="important-places">sundarban</li>
+                  <li class="important-places">bandorban</li>
+                  <li class="other-places">cox's bazar</li>
+            </ul>
+       </section>
+      </main>
+      <script src="js/dom.js"></script>
+      <script>
+            const liCollection = document.getElementsByTagName('li');
+            for ( const li of liCollection){
+                  <!-- console.log(li.innerText); -->
+            }
+            //option 1 :getElementsByTagName
+            const allHeadings = document.getElementsByTagName('h1');
+            for (const h1 of allHeadings){
+                  //console.log(h1.innerText);
+            }
+            //option 3 : getElementsByClassname (etao use korbo procur)
+            const places = document.getElementsByClassName('important-places');
+            for(const place of places){
+                  console.log(place.innerText);
+            }
+            //option 2 : getElementById(procur use korbo)
+            const fruitsTitle = document.getElementById('fruits-title');
+            fruitsTitle.innerText ='fruits change by js';
+
+            //option 4 : querySelectorAll 
+            const someLi = document.querySelectorAll('.fruits-container');
+            for (const li of someLi){
+                  console.log(li.innerText);
+            }
+
+            //option 5 : querySelector(only to get first one);                        git add .
+      </script>
+</body>
+</html>
