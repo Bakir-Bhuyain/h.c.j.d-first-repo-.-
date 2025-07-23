@@ -35,14 +35,14 @@
             </section>
       
        <section class="fruits-container">
-            <h1 id="fruits-title">I Like Fruits</h1>
+            <h1 id="fruits-title" class="some-class randome-class blue bg">I Like Fruits</h1>
             <ul>
                   <li>Apple</li>
                   <li>Banana</li>
                   <li>Cherry</li>
             </ul>
        </section>    
-       <section>
+       <section id="places-container" class="yellow-bg">
             <h1 id="places-title">Places i like to visit </h1>
             <ul>
                   <li class="important-places">kataban</li>
@@ -66,7 +66,7 @@
             //option 3 : getElementsByClassname (etao use korbo procur)
             const places = document.getElementsByClassName('important-places');
             for(const place of places){
-                  console.log(place.innerText);
+                  //console.log(place.innerText);
             }
             //option 2 : getElementById(procur use korbo)
             const fruitsTitle = document.getElementById('fruits-title');
@@ -75,10 +75,13 @@
             //option 4 : querySelectorAll 
             const someLi = document.querySelectorAll('.fruits-container');
             for (const li of someLi){
-                  console.log(li.innerText);
+                  //console.log(li.innerText);
             }
 
-            //option 5 : querySelector(only to get first one);                        git add .
+            //option 5 : querySelector(only to get first one); 
+      </script>
+      <script src="js/styleinjs.js">
+
       </script>
 </body>
 </html>
